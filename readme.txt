@@ -1,1 +1,1 @@
-first run test
+A simple console app  - debugging exercise.
