@@ -66,8 +66,10 @@ namespace ProblematicProblem
                     {
                 Console.Write("You didn't want to see the current list we have and you didn't want to add anything to the list so there is nothing to show you.");
                 Console.Write("GOOD BYE");
+                //exit
+                Environment.Exit(0);
             };
-
+          
 
  
             while (addToList)
@@ -107,7 +109,7 @@ namespace ProblematicProblem
                     int randomNumber = rng.Next(activities.Count);
                     string randomActivity = activities[randomNumber];
 
-                  //  if (userAge < 21 && randomActivity == "Wine Tasting")
+                  if (userAge < 21 && randomActivity == "Wine Tasting")
                     {
                         Console.WriteLine($"Oh no! Looks like you are too young to do {randomActivity}");
                         Console.WriteLine("Pick something else!");
@@ -115,7 +117,7 @@ namespace ProblematicProblem
                         randomNumber = rng.Next(activities.Count);
                         randomActivity = activities[randomNumber];
                     }
-                    Console.Write($"Ah got it! {"username"}, your random activity is: {randomActivity}! Is this ok or do you want to grab another activity? Keep/Redo: ");
+                    Console.Write($"Ah got it! {userName}, your random activity is: {randomActivity}! Is this ok or do you want to grab another activity? Keep/Redo: ");
                     Console.WriteLine();
                     cont = (Console.ReadLine().ToLower() == "redo") ? true : false;
 
